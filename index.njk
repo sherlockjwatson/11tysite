@@ -1,0 +1,27 @@
+﻿---
+layout: layout.njk
+title: The Oldies Station
+description: Dit is een website om uit te vogelen hoe 11ty werkt,
+keywords: 11ty, Eleventy, test site
+---
+
+{% include "_includes/partials/header.njk" %}
+
+<div class="content-wrapper">
+  <div class="card">
+    <h2>Welkom op The Oldies Station</h2>
+    <p>Dit is de testversie van de website om 11ty uit te vogelen, maar de volgende keer dat je deze site ziet zal het er heel anders uitzien!</p>
+    </div>
+  
+  <div class="posts">
+    <h2>Blogs</h2>
+    <ul>
+        {% for post in collections.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+            <p>{{ post.data.description }}</p>
+        
+        </li>
+        {% endfor %}
+    </ul>
+</div>

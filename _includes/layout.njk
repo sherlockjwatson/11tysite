@@ -1,0 +1,14 @@
+---
+title: Test
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/bundle.css">
+</head>
+<body>
+    {{ content | safe }}
+     {% include "partials/footer.njk" %}
+</body>
+</html>
